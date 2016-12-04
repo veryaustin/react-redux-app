@@ -4,10 +4,12 @@
   "description": "Building an application with ReactJS & Redux",
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress tools/testSetup.js \"src/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "Austin Lauritsen",
   "license": "MIT",
