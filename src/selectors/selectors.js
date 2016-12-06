@@ -1,4 +1,4 @@
-export function authorsFormattedForDropDown(authors) {
+export function authorsFormattedForDropdown(authors) {
   return authors.map(author => {
     return {
       value: author.id,

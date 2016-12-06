@@ -1,5 +1,5 @@
 import expect from 'expect';
-import {authorsFormattedForDropDown} from './selectors';
+import {authorsFormattedForDropdown} from './selectors';
 
 describe('Author Selectors', () => {
   describe('authorsFormattedForDropdown', () => {
@@ -14,7 +14,7 @@ describe('Author Selectors', () => {
         {value: 'scott-allen', text: 'Scott Allen'}
       ];
 
-      expect(authorsFormattedForDropDown(authors)).toEqual(expected);
+      expect(authorsFormattedForDropdown(authors)).toEqual(expected);
     });
   });
 });
